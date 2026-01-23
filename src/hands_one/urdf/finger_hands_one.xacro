@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="little_finger">
+
+  <xacro:macro name="little_finger" params="name parent xyz rpy">
+    <link name="$little_proximal_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://hands_one/meshes/LittleProximalUpdated.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1 1 1 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://hands_one/meshes/LittleProximalUpdated.stl" scale="1 1 1"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.1"/>
+        <origin xyz="0 0 0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+    </link>
+
+    <joint name="$little_proximal_joint" type="revolute">
+      <parent link="${parent}"/>
+      <child link="$little_proximal_link"/>
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+      <axis xyz="0 1 0"/>
+      <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    </joint>
+  </xacro:macro>
+
+</robot>

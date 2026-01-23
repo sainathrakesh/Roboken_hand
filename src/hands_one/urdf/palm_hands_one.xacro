@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="hands_one">
+
+  <xacro:include filename="$(find hands_one)/urdf/finger_hands_one.xacro"/>
+  <xacro:little_finger name="little_finger" parent="PalmMid_link" xyz="-37.5 8.75 0" rpy="0 0 0"/>
+
+  <!-- Palm Mid link -->
+  <link name="PalmMid_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/PalmMid.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/PalmMid.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Palm Back link -->
+  <link name="PalmBackCover_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/PalmBackCoverUpdated.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/PalmBackCoverUpdated.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Palm Front link -->
+  <link name="PalmFrontCover_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/PalmFrontCover.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/PalmFrontCover.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Little Finger Servo -->
+  <link name="LittleServo_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Ring Finger Servo -->
+  <link name="RingServo_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Middle Finger Servo -->
+  <link name="MiddleServo_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Index Finger Servo -->
+  <link name="IndexServo_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Thumb Servo -->
+  <link name="ThumbServo_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 0.5"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <!-- Joint connecting PalmBackCover to PalmMid -->
+  <joint name="PalmBack_joint" type="fixed">
+    <parent link="PalmMid_link"/>
+    <child link="PalmBackCover_link"/>
+    <origin xyz="0 -5.0 -7.5" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Joint connecting PalmFrontCover to PalmMid -->
+  <joint name="PalmFront_joint" type="fixed">
+    <parent link="PalmMid_link"/>
+    <child link="PalmFrontCover_link"/>
+    <origin xyz="0 -5.0 17.5" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Joint connecting LittleFingerServo to PalmMid -->
+  <joint name="LittleServo_joint" type="fixed">
+    <parent link="PalmMid_link"/>
+    <child link="LittleServo_link"/>
+    <origin xyz="-37.5 8.75 -2.0" rpy="1.5708 0 1.5708"/>
+  </joint>
+
+  <!-- Joint connecting RingFingerServo to PalmMid -->
+  <joint name="RingServo_joint" type="fixed">
+    <parent link="PalmMid_link"/>
+    <child link="RingServo_link"/>
+    <origin xyz="-12.5 21.25 -2.0" rpy="1.5708 0 1.5708"/>
+  </joint>
+
+  <!-- Joint connecting MiddleFingerServo to PalmMid -->
+  <joint name="MiddleServo_joint" type="fixed">
+    <parent link="PalmMid_link"/>
+    <child link="MiddleServo_link"/>
+    <origin xyz="12.5 28.75 -2.0" rpy="1.5708 0 1.5708"/>
+  </joint>
+
+  <!-- Joint connecting IndexFingerServo to PalmMid -->
+  <joint name="IndexServo_joint" type="fixed">
+    <parent link="PalmMid_link"/>
+    <child link="IndexServo_link"/>
+    <origin xyz="37.5 21.25 -2.0" rpy="1.5708 0 1.5708"/>
+  </joint>
+
+  <!-- Joint connecting ThumbFingerServo to PalmMid -->
+  <joint name="ThumbServo_joint" type="fixed">
+    <parent link="PalmMid_link"/>
+    <child link="ThumbServo_link"/>
+    <origin xyz="19.24 -39.31 -2.0" rpy="1.5708 0 0.7854"/>
+  </joint>
+
+</robot>
