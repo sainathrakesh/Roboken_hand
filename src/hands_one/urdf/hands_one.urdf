@@ -18,11 +18,13 @@
         <color rgba="0.5 0.5 0.5 1"/>
       </material>
     </visual>
+
     <collision>
       <geometry>
         <mesh filename="package://hands_one/meshes/PalmMid.stl" scale="0.01 0.01 0.01"/>
       </geometry>
     </collision>
+
     <inertial>
       <mass value="0.5"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -30,9 +32,9 @@
     </inertial>
   </link>
 
-  <gazebo reference="PalmMid_link">
-    <material>Gazebo/Gray</material>
-    <gravity>false</gravity>
+  <gazebo reference="PalmMid_link"> 
+    <material>Gazebo/Gray</material> 
+    <gravity>false</gravity> 
   </gazebo>
 
   <!-- Palm Back link -->
@@ -57,11 +59,6 @@
     </inertial>
   </link>
 
-  <gazebo reference="PalmBackCover_link">
-    <material>Gazebo/Red</material>
-    <gravity>false</gravity>
-  </gazebo>
-
   <!-- Palm Front link -->
   <link name="PalmFrontCover_link">
     <visual>
@@ -83,11 +80,6 @@
       <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
     </inertial>
   </link>
-
-  <gazebo reference="PalmFrontCover_link">
-    <material>Gazebo/White</material>
-    <gravity>false</gravity>
-  </gazebo>
 
   <!-- Joint connecting PalmBackCover to PalmMid -->
   <joint name="PalmBack_joint" type="fixed">
