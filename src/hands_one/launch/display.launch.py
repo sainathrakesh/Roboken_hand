@@ -31,11 +31,11 @@ def generate_launch_description():
                 ('/hand_joint_states', '/joint_states')  # Drive robot's /joint_states directly
             ]
         ),
-        Node(
-            package='joint_state_publisher',
-            executable='joint_state_publisher',
-            name='joint_state_publisher',
-            output='screen',
-            parameters=[{'use_gui': False}]  # set False for non-GUI
-        ),
+        # Node(
+        #     package='joint_state_publisher',
+        #     executable='joint_state_publisher',
+        #     name='joint_state_publisher',
+        #     output='screen',
+        #     parameters=[{'use_gui': False}]  # set False for non-GUI
+        # ),
     ])

@@ -1,0 +1,29 @@
+moveit_simple_controller_manager:
+  controller_names:
+    - hand_controller
+
+  hand_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: True
+    joints:
+      - IndexMechanism_joint
+      - Index_Distal_joint
+      - Index_Middle_joint
+      - Index_ProximalGearbox_joint
+      - LittleMechanism_joint
+      - Little_Distal_joint
+      - Little_Middle_joint
+      - Little_ProximalGearbox_joint
+      - MiddleMechanism_joint
+      - Middle_Distal_joint
+      - Middle_Middle_joint
+      - Middle_ProximalGearbox_joint
+      - RingMechanism_joint
+      - Ring_Distal_joint
+      - Ring_Middle_joint
+      - Ring_ProximalGearbox_joint
+      - ThumbMechanism_joint
+      - Thumb_Distal_joint
+      - Thumb_Middle_joint
+      - Thumb_ProximalGearbox_joint

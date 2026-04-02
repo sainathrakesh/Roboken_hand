@@ -1,0 +1,23 @@
+# Default initial positions for hands_one's ros2_control fake system
+
+initial_positions:
+  IndexMechanism_joint: 0
+  Index_Distal_joint: 0
+  Index_Middle_joint: 0
+  Index_ProximalGearbox_joint: 0
+  LittleMechanism_joint: 0
+  Little_Distal_joint: 0
+  Little_Middle_joint: 0
+  Little_ProximalGearbox_joint: 0
+  MiddleMechanism_joint: 0
+  Middle_Distal_joint: 0
+  Middle_Middle_joint: 0
+  Middle_ProximalGearbox_joint: 0
+  RingMechanism_joint: 0
+  Ring_Distal_joint: 0
+  Ring_Middle_joint: 0
+  Ring_ProximalGearbox_joint: 0
+  ThumbMechanism_joint: 0
+  Thumb_Distal_joint: 0
+  Thumb_Middle_joint: 0
+  Thumb_ProximalGearbox_joint: 0

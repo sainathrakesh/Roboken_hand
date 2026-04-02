@@ -12,7 +12,7 @@
   <link name="PalmMid_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/PalmMid.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/PalmMidUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -21,7 +21,7 @@
 
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/PalmMid.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/PalmMidUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
 
@@ -41,7 +41,7 @@
   <link name="PalmBackCover_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/PalmBackCoverUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/PalmBackCoverUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -49,7 +49,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/PalmBackCoverUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/PalmBackCoverUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -63,7 +63,7 @@
   <link name="PalmFrontCover_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/PalmFrontCover.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/PalmFrontCover.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
@@ -71,7 +71,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/PalmFrontCover.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/PalmFrontCover.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -85,21 +85,21 @@
   <joint name="PalmBack_joint" type="fixed">
     <parent link="PalmMid_link"/>
     <child link="PalmBackCover_link"/>
-    <origin xyz="0 -0.050 -0.075" rpy="0 0 0"/>
+    <origin xyz="0 -0.0050 -0.0075" rpy="0 0 0"/>
   </joint>
 
   <!-- Joint connecting PalmFrontCover to PalmMid -->
   <joint name="PalmFront_joint" type="fixed">
     <parent link="PalmMid_link"/>
     <child link="PalmFrontCover_link"/>
-    <origin xyz="0 -0.050 0.175" rpy="0 0 0"/>
+    <origin xyz="0 -0.0050 0.0175" rpy="0 0 0"/>
   </joint>
 
   <!-- Little Finger Servo -->
   <link name="LittleServo_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -107,7 +107,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -121,7 +121,7 @@
   <link name="RingServo_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -129,7 +129,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -143,7 +143,7 @@
   <link name="MiddleServo_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -151,7 +151,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -165,7 +165,7 @@
   <link name="IndexServo_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -173,7 +173,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -187,7 +187,7 @@
   <link name="ThumbServo_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="black">
         <color rgba="0 0 0 1"/>
@@ -195,7 +195,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/servo.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -209,43 +209,48 @@
   <joint name="LittleServo_joint" type="fixed">
     <parent link="PalmMid_link"/>
     <child link="LittleServo_link"/>
-    <origin xyz="-0.375 0.0875 -0.020" rpy="1.5708 0 1.5708"/>
+    <origin xyz="-0.0375 0.00875 -0.0020" rpy="1.5708 0 1.5708"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Joint connecting RingFingerServo to PalmMid -->
   <joint name="RingServo_joint" type="fixed">
     <parent link="PalmMid_link"/>
     <child link="RingServo_link"/>
-    <origin xyz="-0.125 0.2125 -0.020" rpy="1.5708 0 1.5708"/>
+    <origin xyz="-0.0125 0.02125 -0.0020" rpy="1.5708 0 1.5708"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Joint connecting MiddleFingerServo to PalmMid -->
   <joint name="MiddleServo_joint" type="fixed">
     <parent link="PalmMid_link"/>
     <child link="MiddleServo_link"/>
-    <origin xyz="0.125 0.2875 -0.020" rpy="1.5708 0 1.5708"/>
+    <origin xyz="0.0125 0.02875 -0.0020" rpy="1.5708 0 1.5708"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Joint connecting IndexFingerServo to PalmMid -->
   <joint name="IndexServo_joint" type="fixed">
     <parent link="PalmMid_link"/>
     <child link="IndexServo_link"/>
-    <origin xyz="0.375 0.2125 -0.020" rpy="1.5708 0 1.5708"/>
+    <origin xyz="0.0375 0.02125 -0.0020" rpy="1.5708 0 1.5708"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Joint connecting ThumbFingerServo to PalmMid -->
   <joint name="ThumbServo_joint" type="fixed">
     <parent link="PalmMid_link"/>
     <child link="ThumbServo_link"/>
-    <origin xyz="0.1924 -0.3931 -0.020" rpy="1.5708 0 0.7854"/>
+    <origin xyz="0.01924 -0.03931 0.01795" rpy="1.5708 0 0.7854"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Little Abduction Mechanism -->
   <link name="LittleMechanism_link">
     <visual>
-      <origin xyz="0 0.157 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -253,7 +258,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -267,17 +272,18 @@
   <joint name="LittleMechanism_joint" type="revolute">
     <parent link="LittleServo_link"/>
     <child link="LittleMechanism_link"/>
-    <origin xyz="0.054 0.175 0" rpy="-1.5708 -1.5708 0"/>
+    <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.57" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.1" upper="0.52" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Ring Abduction Mechanism -->
   <link name="RingMechanism_link">
     <visual>
-      <origin xyz="0 0.157 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -285,7 +291,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -299,17 +305,18 @@
   <joint name="RingMechanism_joint" type="revolute">
     <parent link="RingServo_link"/>
     <child link="RingMechanism_link"/>
-    <origin xyz="0.054 0.175 0" rpy="-1.5708 -1.5708 0"/>
+    <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.57" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.1" upper="0.35" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Middle Abduction Mechanism -->
   <link name="MiddleMechanism_link">
     <visual>
-      <origin xyz="0 0.157 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -317,7 +324,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -327,21 +334,22 @@
     </inertial>
   </link>
 
-  <!-- Joint connecting Middle Abduction Mechanism to RingFingerServo -->
+  <!-- Joint connecting Middle Abduction Mechanism to IndexFingerServo -->
   <joint name="MiddleMechanism_joint" type="revolute">
     <parent link="MiddleServo_link"/>
     <child link="MiddleMechanism_link"/>
-    <origin xyz="0.054 0.175 0" rpy="-1.5708 -1.5708 0"/>
+    <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.57" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.2" upper="0.2" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Index Abduction Mechanism -->
   <link name="IndexMechanism_link">
     <visual>
-      <origin xyz="0 0.157 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -349,7 +357,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -359,21 +367,22 @@
     </inertial>
   </link>
 
-  <!-- Joint connecting Index Abduction Mechanism to RingFingerServo -->
+  <!-- Joint connecting Index Abduction Mechanism to IndexFingerServo -->
   <joint name="IndexMechanism_joint" type="revolute">
     <parent link="IndexServo_link"/>
     <child link="IndexMechanism_link"/>
-    <origin xyz="0.054 0.175 0" rpy="-1.5708 -1.5708 0"/>
+    <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.57" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.52" upper="0.1" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Thumb Abduction Mechanism -->
   <link name="ThumbMechanism_link">
     <visual>
-      <origin xyz="0 0.157 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -381,7 +390,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -391,21 +400,22 @@
     </inertial>
   </link>
 
-  <!-- Joint connecting Thumb Abduction Mechanism to RingFingerServo -->
+  <!-- Joint connecting Thumb Abduction Mechanism to ThumbFingerServo -->
   <joint name="ThumbMechanism_joint" type="revolute">
     <parent link="ThumbServo_link"/>
     <child link="ThumbMechanism_link"/>
-    <origin xyz="0.054 0.175 0" rpy="-1.5708 -1.5708 0"/>
+    <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-1.57" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.6" upper="1.1" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- LittleProximal Gearbox -->
   <link name="Little_ProximalGearbox_link">
     <visual>
-      <origin xyz="0 -0.03 0" rpy="0 0 0"/>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -413,7 +423,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -427,17 +437,18 @@
   <joint name="Little_ProximalGearbox_joint" type="revolute">
     <parent link="LittleMechanism_link"/>
     <child link="Little_ProximalGearbox_link"/>
-    <origin xyz="0 0.2375 -0.03" rpy="0 -1.57 -3.14159"/>
+    <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
-    <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- RingProximal Gearbox -->
   <link name="Ring_ProximalGearbox_link">
     <visual>
-      <origin xyz="0 -0.03 0" rpy="0 0 0"/>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -445,7 +456,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -459,18 +470,19 @@
   <joint name="Ring_ProximalGearbox_joint" type="revolute">
     <parent link="RingMechanism_link"/>
     <child link="Ring_ProximalGearbox_link"/>
-    <origin xyz="0 0.2375 -0.03" rpy="0 -1.57 -3.14159"/>
+    <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
-    <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
 
   <!-- MiddleProximal Gearbox -->
   <link name="Middle_ProximalGearbox_link">
     <visual>
-      <origin xyz="0 -0.03 0" rpy="0 0 0"/>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -478,7 +490,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -492,17 +504,18 @@
   <joint name="Middle_ProximalGearbox_joint" type="revolute">
     <parent link="MiddleMechanism_link"/>
     <child link="Middle_ProximalGearbox_link"/>
-    <origin xyz="0 0.2375 -0.03" rpy="0 -1.57 -3.14159"/>
+    <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
-    <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- IndexProximal Gearbox -->
   <link name="Index_ProximalGearbox_link">
     <visual>
-      <origin xyz="0 -0.03 0" rpy="0 0 0"/>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -510,7 +523,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -520,21 +533,22 @@
     </inertial>
   </link>
 
-  <!-- Joint connecting Ring Finger Gearbox to Index Finger Mechanism -->
+  <!-- Joint connecting Index Finger Gearbox to Index Finger Mechanism -->
   <joint name="Index_ProximalGearbox_joint" type="revolute">
     <parent link="IndexMechanism_link"/>
     <child link="Index_ProximalGearbox_link"/>
-    <origin xyz="0 0.2375 -0.03" rpy="0 -1.57 -3.14159"/>
+    <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
-    <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- ThumbProximal Gearbox -->
   <link name="Thumb_ProximalGearbox_link">
     <visual>
-      <origin xyz="0 -0.03 0" rpy="0 0 0"/>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -542,7 +556,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -556,16 +570,17 @@
   <joint name="Thumb_ProximalGearbox_joint" type="revolute">
     <parent link="ThumbMechanism_link"/>
     <child link="Thumb_ProximalGearbox_link"/>
-    <origin xyz="0 0.2375 -0.03" rpy="0 -1.57 -3.14159"/>
+    <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
-    <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <limit lower="-1.0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Little Proximal Link -->
   <link name="Little_Proximal_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/LittleProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/LittleProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 0.5"/>
@@ -573,7 +588,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/LittleProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/LittleProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -587,14 +602,14 @@
   <joint name="Little_Proximal_joint" type="fixed">
     <parent link="Little_ProximalGearbox_link"/>
     <child link="Little_Proximal_link"/>
-    <origin xyz="0 -0.276 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 -0.0276 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Ring Proximal Link -->
   <link name="Ring_Proximal_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -602,7 +617,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -616,14 +631,14 @@
   <joint name="Ring_Proximal_joint" type="fixed">
     <parent link="Ring_ProximalGearbox_link"/>
     <child link="Ring_Proximal_link"/>
-    <origin xyz="0 -0.296 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 -0.0296 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Middle Proximal Link -->
   <link name="Middle_Proximal_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -631,7 +646,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -645,14 +660,14 @@
   <joint name="Middle_Proximal_joint" type="fixed">
     <parent link="Middle_ProximalGearbox_link"/>
     <child link="Middle_Proximal_link"/>
-    <origin xyz="0 -0.296 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 -0.0296 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Index Proximal Link -->
   <link name="Index_Proximal_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -660,7 +675,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexProximalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -674,14 +689,14 @@
   <joint name="Index_Proximal_joint" type="fixed">
     <parent link="Index_ProximalGearbox_link"/>
     <child link="Index_Proximal_link"/>
-    <origin xyz="0 -0.296 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 -0.0296 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Thumb Proximal Link -->
   <link name="Thumb_Proximal_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/ThumbProximal.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/ThumbProximal.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -689,7 +704,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/ThumbProximal.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/ThumbProximal.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -703,14 +718,14 @@
   <joint name="Thumb_Proximal_joint" type="fixed">
     <parent link="Thumb_ProximalGearbox_link"/>
     <child link="Thumb_Proximal_link"/>
-    <origin xyz="0 -0.271 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 -0.0271 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Little Middle Gearbox -->
   <link name="Little_MiddleGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -718,7 +733,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -732,14 +747,14 @@
   <joint name="Little_MiddleGearbox_joint" type="fixed">
     <parent link="Little_Proximal_link"/>
     <child link="Little_MiddleGearbox_link"/>
-    <origin xyz="0 -0.246 0" rpy="3.14159 -1.5708 0"/>
+    <origin xyz="0 -0.0246 0" rpy="3.14159 -1.5708 0"/>
   </joint>
 
   <!-- Ring Middle Gearbox -->
   <link name="Ring_MiddleGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -747,7 +762,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -761,7 +776,7 @@
   <joint name="Ring_MiddleGearbox_joint" type="fixed">
     <parent link="Ring_Proximal_link"/>
     <child link="Ring_MiddleGearbox_link"/>
-    <origin xyz="0 -0.266 0" rpy="3.14159 -1.5708 0"/>
+    <origin xyz="0 -0.0266 0" rpy="3.14159 -1.5708 0"/>
   </joint>
 
 
@@ -769,7 +784,7 @@
   <link name="Middle_MiddleGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -777,7 +792,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -791,7 +806,7 @@
   <joint name="Middle_MiddleGearbox_joint" type="fixed">
     <parent link="Middle_Proximal_link"/>
     <child link="Middle_MiddleGearbox_link"/>
-    <origin xyz="0 -0.266 0" rpy="3.14159 -1.5708 0"/>
+    <origin xyz="0 -0.0266 0" rpy="3.14159 -1.5708 0"/>
   </joint>
 
 
@@ -799,7 +814,7 @@
   <link name="Index_MiddleGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -807,7 +822,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -821,14 +836,14 @@
   <joint name="Index_MiddleGearbox_joint" type="fixed">
     <parent link="Index_Proximal_link"/>
     <child link="Index_MiddleGearbox_link"/>
-    <origin xyz="0 -0.266 0" rpy="3.14159 -1.5708 0"/>
+    <origin xyz="0 -0.0266 0" rpy="3.14159 -1.5708 0"/>
   </joint>
 
   <!-- Thumb Middle Gearbox -->
   <link name="Thumb_MiddleGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -836,7 +851,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -850,15 +865,15 @@
   <joint name="Thumb_MiddleGearbox_joint" type="fixed">
     <parent link="Thumb_Proximal_link"/>
     <child link="Thumb_MiddleGearbox_link"/>
-    <origin xyz="0 -0.241 0" rpy="3.14159 0 0"/>
+    <origin xyz="0 -0.0241 0" rpy="3.14159 0 0"/>
   </joint>
 
   <!-- LittleMiddle Link -->
   <link name="Little_Middle_link">
     <visual>
-      <origin xyz="0 0.135 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -866,7 +881,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -880,17 +895,18 @@
   <joint name="Little_Middle_joint" type="revolute">
     <parent link="Little_MiddleGearbox_link"/>
     <child link="Little_Middle_link"/>
-    <origin xyz="0 0.03 0" rpy="0 1.57 0"/>
+    <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- RingMiddle Link -->
   <link name="Ring_Middle_link">
     <visual>
-      <origin xyz="0 0.135 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -898,7 +914,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -912,17 +928,18 @@
   <joint name="Ring_Middle_joint" type="revolute">
     <parent link="Ring_MiddleGearbox_link"/>
     <child link="Ring_Middle_link"/>
-    <origin xyz="0 0.03 0" rpy="0 1.57 0"/>
+    <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- MiddleMiddle Link -->
   <link name="Middle_Middle_link">
     <visual>
-      <origin xyz="0 0.135 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -930,7 +947,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -944,17 +961,18 @@
   <joint name="Middle_Middle_joint" type="revolute">
     <parent link="Middle_MiddleGearbox_link"/>
     <child link="Middle_Middle_link"/>
-    <origin xyz="0 0.03 0" rpy="0 1.57 0"/>
+    <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- IndexMiddle Link -->
   <link name="Index_Middle_link">
     <visual>
-      <origin xyz="0 0.135 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -962,7 +980,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -976,16 +994,17 @@
   <joint name="Index_Middle_joint" type="revolute">
     <parent link="Index_MiddleGearbox_link"/>
     <child link="Index_Middle_link"/>
-    <origin xyz="0 0.03 0" rpy="0 1.57 0"/>
+    <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <link name="Thumb_Middle_link">
     <visual>
-      <origin xyz="0 0.135 0" rpy="0 0 0"/>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -993,7 +1012,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1007,16 +1026,17 @@
   <joint name="Thumb_Middle_joint" type="revolute">
     <parent link="Thumb_MiddleGearbox_link"/>
     <child link="Thumb_Middle_link"/>
-    <origin xyz="0 0.03 0" rpy="0 1.57 0"/>
+    <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- Little Distal Gearbox -->
   <link name="Little_DistalGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1024,7 +1044,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1038,14 +1058,14 @@
   <joint name="Little_DistalGearbox_joint" type="fixed">
     <parent link="Little_Middle_link"/>
     <child link="Little_DistalGearbox_link"/>
-    <origin xyz="0 0.376 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 0.0376 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Ring Distal Gearbox -->
   <link name="Ring_DistalGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1053,7 +1073,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1067,14 +1087,14 @@
   <joint name="Ring_DistalGearbox_joint" type="fixed">
     <parent link="Ring_Middle_link"/>
     <child link="Ring_DistalGearbox_link"/>
-    <origin xyz="0 0.376 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 0.0376 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Middle Distal Gearbox -->
   <link name="Middle_DistalGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1082,7 +1102,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1096,14 +1116,14 @@
   <joint name="Middle_DistalGearbox_joint" type="fixed">
     <parent link="Middle_Middle_link"/>
     <child link="Middle_DistalGearbox_link"/>
-    <origin xyz="0 0.376 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 0.0376 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Index Distal Gearbox -->
   <link name="Index_DistalGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1111,7 +1131,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1125,14 +1145,14 @@
   <joint name="Index_DistalGearbox_joint" type="fixed">
     <parent link="Index_Middle_link"/>
     <child link="Index_DistalGearbox_link"/>
-    <origin xyz="0 0.376 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 0.0376 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- Thumb Distal Gearbox -->
   <link name="Thumb_DistalGearbox_link">
     <visual>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="green">
         <color rgba="0 1 0 1"/>
@@ -1140,7 +1160,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1154,15 +1174,15 @@
   <joint name="Thumb_DistalGearbox_joint" type="fixed">
     <parent link="Thumb_Middle_link"/>
     <child link="Thumb_DistalGearbox_link"/>
-    <origin xyz="0 0.376 0" rpy="0 1.5708 0"/>
+    <origin xyz="0 0.0376 0" rpy="0 1.5708 0"/>
   </joint>
 
   <!-- LittleDistal Link -->
   <link name="Little_Distal_link">
     <visual>
-      <origin xyz="0 0.1095 0" rpy="0 0 0"/>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1170,7 +1190,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1184,17 +1204,18 @@
   <joint name="Little_Distal_joint" type="revolute">
     <parent link="Little_DistalGearbox_link"/>
     <child link="Little_Distal_link"/>
-    <origin xyz="0 0.0295 0" rpy="0 -1.57 0"/>
+    <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- RingDistal Link -->
   <link name="Ring_Distal_link">
     <visual>
-      <origin xyz="0 0.1095 0" rpy="0 0 0"/>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1202,7 +1223,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1216,17 +1237,18 @@
   <joint name="Ring_Distal_joint" type="revolute">
     <parent link="Ring_DistalGearbox_link"/>
     <child link="Ring_Distal_link"/>
-    <origin xyz="0 0.0295 0" rpy="0 -1.57 0"/>
+    <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- MiddleDistal Link -->
   <link name="Middle_Distal_link">
     <visual>
-      <origin xyz="0 0.1095 0" rpy="0 0 0"/>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1234,7 +1256,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1248,17 +1270,18 @@
   <joint name="Middle_Distal_joint" type="revolute">
     <parent link="Middle_DistalGearbox_link"/>
     <child link="Middle_Distal_link"/>
-    <origin xyz="0 0.0295 0" rpy="0 -1.57 0"/>
+    <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- IndexDistal Link -->
   <link name="Index_Distal_link">
     <visual>
-      <origin xyz="0 0.1095 0" rpy="0 0 0"/>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1266,7 +1289,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1280,17 +1303,18 @@
   <joint name="Index_Distal_joint" type="revolute">
     <parent link="Index_DistalGearbox_link"/>
     <child link="Index_Distal_link"/>
-    <origin xyz="0 0.0295 0" rpy="0 -1.57 0"/>
+    <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- ThumbDistal Link -->
   <link name="Thumb_Distal_link">
     <visual>
-      <origin xyz="0 0.1095 0" rpy="0 0 0"/>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="gray">
         <color rgba="0.5 0.5 0.5 1"/>
@@ -1298,7 +1322,7 @@
     </visual>
     <collision>
       <geometry>
-        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.01 0.01 0.01"/>
+        <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
@@ -1312,9 +1336,10 @@
   <joint name="Thumb_Distal_joint" type="revolute">
     <parent link="Thumb_DistalGearbox_link"/>
     <child link="Thumb_Distal_link"/>
-    <origin xyz="0 0.0295 0" rpy="0 -1.57 0"/>
+    <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
+    <dynamics damping="0.1"/>
   </joint>
 
 </robot>

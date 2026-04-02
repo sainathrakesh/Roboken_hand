@@ -1,0 +1,40 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100.0
+
+    hand_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+hand_controller:
+  ros__parameters:
+    stop_trajectory_duration: 0.2
+    state_publish_rate: 50.0 
+    action_monitor_rate: 20.0
+    joints:
+      - IndexMechanism_joint
+      - Index_Distal_joint
+      - Index_Middle_joint
+      - Index_ProximalGearbox_joint
+      - LittleMechanism_joint
+      - Little_Distal_joint
+      - Little_Middle_joint
+      - Little_ProximalGearbox_joint
+      - MiddleMechanism_joint
+      - Middle_Distal_joint
+      - Middle_Middle_joint
+      - Middle_ProximalGearbox_joint
+      - RingMechanism_joint
+      - Ring_Distal_joint
+      - Ring_Middle_joint
+      - Ring_ProximalGearbox_joint
+      - ThumbMechanism_joint
+      - Thumb_Distal_joint
+      - Thumb_Middle_joint
+      - Thumb_ProximalGearbox_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

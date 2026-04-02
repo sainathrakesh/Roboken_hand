@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: hands_one
+    relative_path: urdf/hands_one.urdf
+  srdf:
+    relative_path: config/hands_one.srdf
+  package_settings:
+    author_name: Sainath Rakesh Nimmagadda
+    author_email: nsainathrakesh@gmail.com
+    generated_timestamp: 1774231699
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
