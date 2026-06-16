@@ -17,6 +17,8 @@ setup(
         ('share/' + package_name + '/meshes', glob('meshes/*')),
         ('share/' + package_name + '/launch', glob('launch/*')),
         ('share/' + package_name + '/urdf', glob('urdf/*')),
+        ('share/hands_one/config', ['config/controllers.yaml']),
+        ('share/hands_one/hands_one', ['hands_one/joint_state_bridge.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -31,6 +33,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'joint_state_bridge = hands_one.joint_state_bridge:main',
         ],
     },
 )

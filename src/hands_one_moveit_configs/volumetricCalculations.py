@@ -35,7 +35,7 @@ def perform_full_analysis(models_config):
 
         # 4. Normalized Metrics
         # Efficiency: How much dexterity do we get per motor?
-        efficiency = mean_dex / config['dof']
+        efficiency = (mean_dex / config['dof'])*5
         
         # Density: How 'rich' is the workspace with agile points?
         density = mean_dex / volume_cm3

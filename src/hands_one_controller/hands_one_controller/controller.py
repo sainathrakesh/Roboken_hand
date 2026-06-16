@@ -1,15 +1,20 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
+from std_msgs.msg import Float64MultiArray, MultiArrayLayout, MultiArrayDimension # Add these imports
 import cv2
 import mediapipe as mp
 import numpy as np
 import threading
+from std_msgs.msg import Int32
 
 class HandPublisher(Node):
     def __init__(self):
+
         super().__init__('hand_publisher')
         self.pub = self.create_publisher(JointState, 'joint_states', 10)
+        self.pub1 = self.create_publisher(Float64MultiArray, '/hand_controller/commands', 10)
+        self.pub_target = self.create_publisher(Int32, '/target_angle', 10)
         
         self.joint_angles = [0.0] * 20
         self.joint_angles_filtered = [0.0] * 20
@@ -140,6 +145,20 @@ class HandPublisher(Node):
         # msg.position = self.joint_angles_filtered
         msg.position = [round(float(p), 3) for p in self.joint_angles_filtered]
         self.pub.publish(msg)
+
+        cmd_msg = Float64MultiArray()
+        # Force a list of primitive python floats
+        cmd_msg.data = [float(x) for x in self.joint_angles_filtered]
+        self.pub1.publish(cmd_msg)
+
+        #finger_control
+
+        thumb_mech_rad = self.joint_angles_filtered[3]
+        target_deg = int(np.clip(np.degrees(thumb_mech_rad) - 90, -90, 0))
+
+        target_msg = Int32()
+        target_msg.data = target_deg
+        self.pub_target.publish(target_msg)
 
 def main():
     rclpy.init(); node = HandPublisher()

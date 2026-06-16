@@ -1,0 +1,43 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    use_sim_time: true
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+    hand_controller:
+      type: position_controllers/JointGroupPositionController
+
+hand_controller:
+  ros__parameters:
+    joints:
+      # Thumb (indices 0-2)
+      - Thumb_ProximalGearbox_joint
+      - Thumb_Middle_joint
+      - Thumb_Distal_joint
+      # Index (indices 3-5)
+      - Index_ProximalGearbox_joint
+      - Index_Middle_joint
+      - Index_Distal_joint
+      # Middle (indices 6-8)
+      - Middle_ProximalGearbox_joint
+      - Middle_Middle_joint
+      - Middle_Distal_joint
+      # Ring (indices 9-11)
+      - Ring_ProximalGearbox_joint
+      - Ring_Middle_joint
+      - Ring_Distal_joint
+      # Little (indices 12-14)
+      - Little_ProximalGearbox_joint
+      - Little_Middle_joint
+      - Little_Distal_joint
+      # Mechanisms (indices 15-19)
+      - ThumbMechanism_joint
+      - IndexMechanism_joint
+      - MiddleMechanism_joint
+      - RingMechanism_joint
+      - LittleMechanism_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

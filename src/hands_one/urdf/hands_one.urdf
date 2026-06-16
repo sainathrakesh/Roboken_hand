@@ -1,7 +1,20 @@
 <?xml version="1.0"?>
 <robot name="hands_one">
 
+  <!-- Connect base_link to the world so it stays fixed in space -->
+  <link name="world"/>
+
+  <joint name="world_fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.5" rpy="1.5708 0 0"/>
+  </joint>
+
   <link name="base_link"/>
+
+  <gazebo reference="base_link">
+    <static>true</static>
+  </gazebo>
 
   <joint name="base_fixed" type="fixed">
     <parent link="base_link"/>
@@ -210,7 +223,7 @@
     <parent link="PalmMid_link"/>
     <child link="LittleServo_link"/>
     <origin xyz="-0.0375 0.00875 -0.0020" rpy="1.5708 0 1.5708"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Joint connecting RingFingerServo to PalmMid -->
@@ -218,7 +231,7 @@
     <parent link="PalmMid_link"/>
     <child link="RingServo_link"/>
     <origin xyz="-0.0125 0.02125 -0.0020" rpy="1.5708 0 1.5708"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Joint connecting MiddleFingerServo to PalmMid -->
@@ -226,7 +239,7 @@
     <parent link="PalmMid_link"/>
     <child link="MiddleServo_link"/>
     <origin xyz="0.0125 0.02875 -0.0020" rpy="1.5708 0 1.5708"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Joint connecting IndexFingerServo to PalmMid -->
@@ -234,7 +247,7 @@
     <parent link="PalmMid_link"/>
     <child link="IndexServo_link"/>
     <origin xyz="0.0375 0.02125 -0.0020" rpy="1.5708 0 1.5708"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Joint connecting ThumbFingerServo to PalmMid -->
@@ -242,7 +255,7 @@
     <parent link="PalmMid_link"/>
     <child link="ThumbServo_link"/>
     <origin xyz="0.01924 -0.03931 0.01795" rpy="1.5708 0 0.7854"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Little Abduction Mechanism -->
@@ -257,6 +270,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -275,7 +289,7 @@
     <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.1" upper="0.52" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Ring Abduction Mechanism -->
@@ -290,6 +304,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -308,7 +323,7 @@
     <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.1" upper="0.35" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Middle Abduction Mechanism -->
@@ -323,6 +338,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -341,7 +357,7 @@
     <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.2" upper="0.2" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Index Abduction Mechanism -->
@@ -356,6 +372,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -374,7 +391,7 @@
     <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.52" upper="0.1" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Thumb Abduction Mechanism -->
@@ -389,6 +406,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0157 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/AbductionMechanism.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -407,7 +425,7 @@
     <origin xyz="0.0054 0.0175 0" rpy="-1.5708 -1.5708 0"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.6" upper="1.1" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- LittleProximal Gearbox -->
@@ -422,6 +440,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -440,7 +459,7 @@
     <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- RingProximal Gearbox -->
@@ -455,6 +474,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -473,7 +493,7 @@
     <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
 
@@ -489,6 +509,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -507,7 +528,7 @@
     <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- IndexProximal Gearbox -->
@@ -522,6 +543,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -540,7 +562,7 @@
     <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
     <limit lower="-0.3" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- ThumbProximal Gearbox -->
@@ -555,6 +577,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 -0.003 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/Gearbox1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -573,7 +596,7 @@
     <origin xyz="0 0.02375 -0.003" rpy="0 -1.57 -3.14159"/>
     <axis xyz="0 0 1"/>
     <limit lower="-1.0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Little Proximal Link -->
@@ -880,6 +903,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -898,7 +922,7 @@
     <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- RingMiddle Link -->
@@ -913,6 +937,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -931,7 +956,7 @@
     <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- MiddleMiddle Link -->
@@ -946,6 +971,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -964,7 +990,7 @@
     <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- IndexMiddle Link -->
@@ -979,6 +1005,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -997,7 +1024,7 @@
     <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <link name="Thumb_Middle_link">
@@ -1011,6 +1038,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.0135 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexMiddleUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -1029,7 +1057,7 @@
     <origin xyz="0 0.003 0" rpy="0 1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- Little Distal Gearbox -->
@@ -1189,6 +1217,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -1207,7 +1236,7 @@
     <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- RingDistal Link -->
@@ -1222,6 +1251,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -1240,7 +1270,7 @@
     <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- MiddleDistal Link -->
@@ -1255,6 +1285,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -1273,7 +1304,7 @@
     <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- IndexDistal Link -->
@@ -1288,6 +1319,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -1306,7 +1338,7 @@
     <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
   <!-- ThumbDistal Link -->
@@ -1321,6 +1353,7 @@
       </material>
     </visual>
     <collision>
+      <origin xyz="0 0.01095 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://hands_one/meshes/IndexDistalUpdated.stl" scale="0.001 0.001 0.001"/>
       </geometry>
@@ -1339,9 +1372,156 @@
     <origin xyz="0 0.00295 0" rpy="0 -1.57 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="0" upper="1.57" effort="1" velocity="1"/>
-    <dynamics damping="0.1"/>
+    <dynamics damping="0.5" friction="0.2"/>
   </joint>
 
+  <ros2_control name="GazeboSystem" type="system">
+
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <!-- THUMB (indices 0-2) -->
+    <joint name="Thumb_ProximalGearbox_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Thumb_Middle_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Thumb_Distal_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- INDEX (indices 3-5) -->
+    <joint name="Index_ProximalGearbox_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Index_Middle_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Index_Distal_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- MIDDLE (indices 6-8) -->
+    <joint name="Middle_ProximalGearbox_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Middle_Middle_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Middle_Distal_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- RING (indices 9-11) -->
+    <joint name="Ring_ProximalGearbox_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Ring_Middle_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Ring_Distal_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- LITTLE (indices 12-14) -->
+    <joint name="Little_ProximalGearbox_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Little_Middle_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Little_Distal_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- MECHANISMS (indices 15-19) -->
+    <joint name="ThumbMechanism_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="IndexMechanism_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="MiddleMechanism_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="RingMechanism_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="LittleMechanism_joint">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+  </ros2_control>
+  
+  
+  <gazebo>
+    <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+      <parameters>/home/robot/roboken/install/hands_one/share/hands_one/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <disable_collisions link1="Thumb_ProximalGearbox_link" link2="PalmFrontCover"/>
+  </gazebo>
+
+  <gazebo>
+    <disable_collisions link1="ThumbMechanism_link" link2="PalmFrontCover"/>
+  </gazebo>
+
 </robot>
-
-
